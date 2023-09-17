@@ -1,10 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import { ResultProps } from '../constants/types';
+import RoomAllocation from './modules/RoomAllocation';
 
 function App() {
-  return (
-    <h1>React Ecosystem: setting up React from Scratch</h1>
-  )
-} ;
+  const onChangeEvent = (data: ResultProps[]) => console.log(data);
+  const GUEST_QUANTITY = 10;
+  const ROOM_QUANTITY = 3;
 
-ReactDOM.render(<App />, document.getElementById('root'));
+  return <RoomAllocation guest={GUEST_QUANTITY} room={ROOM_QUANTITY} onChange={onChangeEvent} />;
+}
+
+const container = document.getElementById('root');
+const root = container && createRoot(container);
+root && root.render(<App />);
