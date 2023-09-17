@@ -28,7 +28,7 @@ eslint
 prettier-eslint
 
 ## folder structure
-
+```
 .
 ├── conatants
 ├── public
@@ -40,3 +40,4 @@ prettier-eslint
 |     |     └── RoomAllocation
 |     └── index.tsx 
 └── README.md
+```
